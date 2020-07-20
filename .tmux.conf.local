@@ -294,3 +294,6 @@ bind C-q send-prefix
 
 # move status line to top
 #set -g status-position top
+
+# TrueColor対応
+set-option -ga terminal-overrides ",xterm-256color:Tc"
