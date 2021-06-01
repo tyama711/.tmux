@@ -268,8 +268,7 @@ tmux_conf_theme_clock_style='24'
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=true
-set-option -g set-clipboard on
+tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
@@ -298,3 +297,6 @@ bind C-q send-prefix
 
 # TrueColor対応
 set-option -ga terminal-overrides ",xterm-256color:Tc"
+
+# tmuxセッションにreattachした際にEmacsのClipettyのOSC 52が効かなくなる問題の対応
+set -ag update-environment "SSH_TTY"
