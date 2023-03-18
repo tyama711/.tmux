@@ -319,3 +319,5 @@ set-option -ga terminal-overrides ",alacritty:Tc"
 
 # tmuxセッションにreattachした際にEmacsのClipettyのOSC 52が効かなくなる問題の対応
 set -ag update-environment "SSH_TTY"
+
+set -g extended-keys always
